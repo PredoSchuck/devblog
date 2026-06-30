@@ -1,14 +1,10 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
 
-    <h2>Sobre</h2>
-    <p>
-        Este projeto foi criado como pratica das aulas da Trilha de Python do Senac Tech.
-    </p>
+    <h1>Olha eu!</h1>
 
-    <p>
-        Projeto desenvolvido em conjunto com a turma, seguindo os exemplos de cada slide, com evolução continua.
-    </p>
+    <img src="{% static 'blog/images/eu.jpg' %}" class="img-fluid rounded shadow">
 
 {% endblock %}
