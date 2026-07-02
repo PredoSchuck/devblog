@@ -2,9 +2,67 @@
 {% load static %}
 
 {% block content %}
+<div class="container py-4">
+    
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="{% static 'blog/images/eu.jpg' %}" alt="Foto do Pedro" class="img-fluid rounded-circle shadow-lg" style="max-width: 250px; object-fit: cover;">
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold text-dark">Prazer! Me chamo Pedro Augusto!</h1>
+            <p class="lead text-secondary">Assistente de TI e desenvolvedor em formação.</p>
+            <p>
+                Atualmente, sou o único responsável pelo setor de TI na Big Festa. Minha jornada na área começou como Jovem Aprendiz, passei pela função de Auxiliar de TI e hoje atuo diretamente na linha de frente. Minha base técnica é muito forte na <strong>manutenção e otimização de hardware de computadores</strong> — realizando diagnósticos, upgrades e resolvendo problemas físicos. Também coordeno as instalações de equipamentos (como impressoras térmicas e DVRs) e o contato com fornecedores, garantindo que toda a infraestrutura física funcione perfeitamente, sem atuar diretamente na administração de redes ou sistemas de PDV.
+            </p>
+            <p>
+                Acompanhando de perto o funcionamento das máquinas, descobri minha paixão pelo que faz tudo isso rodar: o código. Por isso, venho direcionando meu crescimento e meus estudos para a <strong>programação, com foco em Python</strong>. Estou mergulhando na lógica de desenvolvimento, criação de ferramentas de linha de comando e estruturação de dados, unindo minha bagagem de suporte com a capacidade de criar novas soluções.
+            </p>
+        </div>
+    </div>
 
-    <h1>Olha eu!</h1>
+    <div class="row g-4">
+        
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="card-title text-primary mb-3">O que estou estudando?</h3>
+                    <p class="card-text">
+                        Este <strong>DevBlog</strong> é parte da minha jornada de estudos. Tenho me aprofundado bastante na criação de lógicas, validações e ferramentas de linha de comando. Meu foco atual está em:
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-primary fs-6 mb-2 py-2 px-3">Python</span>
+                        <span class="badge bg-dark fs-6 mb-2 py-2 px-3">Git & GitHub</span>
+                        <span class="badge bg-success fs-6 mb-2 py-2 px-3">Lógica de Programação</span>
+                        <span class="badge bg-secondary fs-6 mb-2 py-2 px-3">Otimização de Processos</span>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="https://github.com/PredoSchuck" target="_blank" class="btn btn-outline-dark w-100 fw-bold">
+                            Veja meu GitHub!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <img src="{% static 'blog/images/eu.jpg' %}" class="img-fluid rounded shadow">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="card-title text-warning mb-3">Curiosidades?</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent px-0 border-bottom">
+                            <strong>RPG de Mesa:</strong> Sou fã de RPG de Mesa, to adorando conhecer RPGs de outros paises e ver diferentes regras!
+                        </li>
+                        <li class="list-group-item bg-transparent px-0 border-bottom">
+                            <strong>Pai de Pet:</strong> Tenho dois cachorros que são meus grandes companheiros! Bidu e Simba!
+                        </li>
+                        <li class="list-group-item bg-transparent px-0">
+                            <strong>Nobreak e baterias:</strong> Durante meu expediente na Big Festa, aprendi como trocar uma bateria estacionária de um nobreak!
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</div>
 {% endblock %}
