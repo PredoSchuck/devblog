@@ -2,24 +2,34 @@
 
 {% block content %}
 
-    <h2>Últimas Notícias</h2>
+    {% if categoria_selecionada %}
+        <h2>Notícias sobre {{ categoria_selecionada }}</h2>
+    {% else %}
+        <h2>Últimas Notícias</h2>
+    {% endif %}
 
-    {% for lista_artigos in noticias %}
+    {% for artigo in lista_artigos %}
 
-    <div class="card mb-3 shadow-sm">
-        <div class="card-body">
-            <h3 class="card-title text-sucess">{{ artigo.titulo }}</h3>
-            <h6 class="card-subtitle mb-2 text-muted">Categoria: {{ artigo.categoria.nome }} | Autor: {{ artigo.autor}}</h6>
-            <p class="card-text">{{ artigo.conteudo }}</p>
-            <p class="card-text">
-                <small class="text-muted"> Publicado em: {{ artigo.data_publicacao }}</small>
-            </p>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title text-success">{{ artigo.titulo }}</h3>
+                <h6 class="card-subtitle mb-2 text-muted">Categoria: {{ artigo.categoria.nome}} | Autor: {{ artigo.autor}}</h6>
+                <p class="card-text">
+                    {{ artigo.conteudo|truncatechars:100}}
+                    <a href="{% url 'detalhe_artigo' artigo.id %}" class="btn btn-success btn-sm">
+                        Ler mais
+                    </a>
+                </p>
+                
+                <p class="card-text">
+                    <small class="text-muted"> Publicado em: {{ artigo.data_publicacao }}</small>
+                </p>
+            </div>
+
         </div>
-    </div>
-    
+
     {% empty %}
         <p>Nenhuma notícia publicada ainda.</p>
     {% endfor %}
-    
 
 {% endblock %}
